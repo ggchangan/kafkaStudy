@@ -20,24 +20,10 @@ public class Cunsumer implements Runnable {
 
     @Override
     public void run() {
-        ConsumerIterator consumerIter = stream.iterator();
+        ConsumerIterator<byte[], byte[]> consumerIter = stream.iterator();
 
         while (consumerIter.hasNext()) {
-            /*
-            MessageAndMetadata messageAndMetadata = consumerIter.next();
-
-            String key = (String) messageAndMetadata.key();
-
-            String value = (String) messageAndMetadata.message();
-            String msg = String.format("Thread %Id: %s", threadNumber, key+":"+value);
-            */
-            /*
-            MessageAndMetadata kafkaMsg = (MessageAndMetadata) consumerIter.next().message();
-            System.out.println(kafkaMsg.key());
-            System.out.println(kafkaMsg.message());
-            */
-
-            String msg = String.format("Thread %Id: %s", threadNumber, consumerIter.next().message().toString());
+            String msg = String.format("Thread %d: %s", threadNumber, new String(consumerIter.next().message()));
             System.out.println(msg);
         }
 

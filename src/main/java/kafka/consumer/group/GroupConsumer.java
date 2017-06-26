@@ -41,7 +41,7 @@ public class GroupConsumer {
         //final String zookeeper = "172.24.63.51:2181,172.24.63.52:2181";
         final String zookeeper = "172.24.65.159:2181";
         final String group = "groupTest";
-        final String topic = "topicTest2";
+        final String topic = "topicTest";
 
         int threads = Integer.parseInt(args[0]);
 
