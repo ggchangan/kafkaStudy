@@ -4,10 +4,7 @@ import kafka.consumer.ConsumerConfig;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -40,10 +37,13 @@ public class GroupConsumer {
     public static void main(String[] args) {
         //final String zookeeper = "172.24.63.51:2181,172.24.63.52:2181";
         final String zookeeper = "172.24.65.159:2181";
-        final String group = "groupTest";
+        String group = "groupTest" + new Random().nextInt(1000);
         final String topic = "topicTest";
 
         int threads = Integer.parseInt(args[0]);
+
+        String groupInfo = String.format("Start consumer group:%s with %d consumers", group, threads, topic);
+        System.out.println(groupInfo);
 
         GroupConsumer groupConsumer = new GroupConsumer(zookeeper, group, topic);
 
