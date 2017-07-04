@@ -26,6 +26,10 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.kafka/kafka_2.11
     compile group: 'org.apache.kafka', name: 'kafka_2.11', version: '0.10.2.0'
 
+    // https://mvnrepository.com/artifact/org.apache.kafka/connect-api
+    compile group: 'org.apache.kafka', name: 'connect-api', version: '0.10.2.0'
+
+
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
