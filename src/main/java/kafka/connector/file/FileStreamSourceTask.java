@@ -15,7 +15,7 @@
  * limitations under the License.
  **/
 
-package kafka.connector;
+package kafka.connector.file;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

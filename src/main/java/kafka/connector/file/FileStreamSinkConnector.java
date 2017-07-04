@@ -15,7 +15,7 @@
  * limitations under the License.
  **/
 
-package kafka.connector;
+package kafka.connector.file;
 
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.common.config.ConfigDef.Importance;
