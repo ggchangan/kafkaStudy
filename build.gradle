@@ -39,5 +39,7 @@ dependencies {
 
     testCompile "org.powermock:powermock-module-junit4:$powermockVersion"
     testCompile "org.powermock:powermock-api-easymock:$powermockVersion"
+    testCompile "org.easymock:easymock:$easymockVersion"
+
 
 }
