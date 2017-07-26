@@ -29,6 +29,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.kafka/connect-api
     compile group: 'org.apache.kafka', name: 'connect-api', version: '0.10.2.0'
 
+    compile group: 'org.apache.kafka', name: 'kafka-streams', version: '0.10.2.0'
+
     // https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper
     compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.10', ext: 'pom'
 
